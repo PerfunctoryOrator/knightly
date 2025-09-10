@@ -1,5 +1,6 @@
 {
     "hosting": {
+        "site": "knightly",
         "public": "dist",
         "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
         "rewrites": [
