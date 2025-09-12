@@ -1,0 +1,30 @@
+:root {
+    --board-color: rgb(181, 136, 99);
+    --light-sq-color: rgb(240, 217, 181);
+}
+
+.board {
+    position: relative;
+    width: 640px;
+    height: 640px;
+    margin: 20px auto;
+}
+.background {
+    display: grid;
+    position: absolute;
+    grid-template-rows: repeat(8, 80px);
+    grid-template-columns: repeat(8, 80px);
+    width: 640px;
+}
+.background > div {
+    background-color: var(--board-color);
+    &.light-sq {
+        background-color: var(--light-sq-color);
+    }
+}
+.piece {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    pointer-events: none;
+}
