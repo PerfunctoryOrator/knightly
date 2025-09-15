@@ -1,6 +1,8 @@
 :root {
-    --board-color: rgb(181, 136, 99);
-    --light-sq-color: rgb(240, 217, 181);
+    --board-color: rgb(125, 91, 166);
+    --light-sq-color: rgb(236, 228, 243);
+
+    --sq-width: 80px;
 }
 
 .board {
@@ -8,12 +10,14 @@
     width: 640px;
     height: 640px;
     margin: 20px auto;
+    border: 2px solid rgb(95, 68, 130);
 }
 .background {
     display: grid;
     position: absolute;
-    grid-template-rows: repeat(8, 80px);
-    grid-template-columns: repeat(8, 80px);
+    grid-template-rows: repeat(8, var(--sq-width));
+    grid-template-columns: repeat(8, var(--sq-width));
+    background-color: var(--board-color);
     width: 640px;
 }
 .background > div {

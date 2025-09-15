@@ -8,9 +8,15 @@ function BackgroundView() {
         <div className="background">
             {Array.from({ length: 64 }, (_, idx) => {
                 const square = indexToSquare(idx);
-                return (
-                    <div key={idx} className={(Math.floor(square / 10) + square % 10) % 2 ? "light-sq" : ""}></div>
-                );
+                if ((Math.floor(square / 10) + square % 10) % 2) {
+                    return (
+                        <div key={idx} className="light-sq"></div>
+                    );
+                } else {
+                    return (
+                        <div key={idx}></div>
+                    );
+                }
             })}
         </div>
     );
