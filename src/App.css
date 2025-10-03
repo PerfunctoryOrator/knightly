@@ -1,6 +1,20 @@
 #root {
+    --theme-color-r: 125;
+    --theme-color-g: 91;
+    --theme-color-b: 166;
+    --theme-background-color: rgb(236, 228, 243);
+    --theme-border-color: rgb(95, 68, 130);
     max-width: 1280px;
     margin: 0 auto;
-    padding: 2rem;
     text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+    #root {
+        --theme-color-r: 236;
+        --theme-color-g: 228;
+        --theme-color-b: 243;
+        --theme-background-color: rgb(125, 91, 166);
+        --theme-border-color: rgb(60, 50, 80);
+    }
 }

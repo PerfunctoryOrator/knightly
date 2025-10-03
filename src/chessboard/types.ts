@@ -2,6 +2,8 @@ export type Square = number;
 export type AlgebraicSquare = string;
 export type Board = Uint8Array;
 
+export type Color = 1 | 0;
+
 export interface Move {
     from: Square;
     to: Square;
@@ -20,16 +22,14 @@ export const Pieces = {
 
 export type PieceType = typeof Pieces[keyof typeof Pieces];
 
-export type Color = 1 | 0;
-
 export interface GameState {
     board: Board;
     activeColor: Color;
     castlingRights: {
-        whiteKing: boolean;
-        whiteQueen: boolean;
-        blackKing: boolean;
-        blackQueen: boolean;
+        K: boolean;
+        Q: boolean;
+        k: boolean;
+        q: boolean;
     };
     enPassantSquare?: Square;
     halfMoveClock: number;

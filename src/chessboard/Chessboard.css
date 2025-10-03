@@ -1,0 +1,41 @@
+:root {
+    --board-color: rgb(125, 91, 166);
+    --board-light-color: rgb(236, 228, 243);
+    --board-dark-color: rgb(95, 68, 130);
+    --sq-width: 90px;
+}
+
+.board {
+    position: relative;
+    width: calc(8 * var(--sq-width));
+    aspect-ratio: 1;
+    margin: 20px auto;
+    border: 2px solid var(--board-dark-color);
+}
+.background {
+    display: grid;
+    position: absolute;
+    grid-template-rows: repeat(8, var(--sq-width));
+    grid-template-columns: repeat(8, var(--sq-width));
+    background-color: var(--board-color);
+}
+.background > div {
+    background-color: var(--board-color);
+    &.light-sq {
+        background-color: var(--board-light-color);
+    }
+}
+.piece {
+    position: absolute;
+    width: var(--sq-width);
+    aspect-ratio: 1;
+    pointer-events: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --board-color: rgb(50, 36, 75);
+        --board-light-color: rgb(144, 119, 187);
+        --board-dark-color: rgb(60, 50, 80);
+    }
+}

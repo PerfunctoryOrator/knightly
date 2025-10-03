@@ -1,6 +1,7 @@
-import Chessboard from "./utils/chess.ts";
-import NavigationBar from "./components/Navigation.tsx";
-import ChessboardView from "./components/Chessboard.tsx";
+import NavigationBar from "./components/Navigation";
+
+import Chessboard from "./chessboard/chess";
+import ChessboardView from "./chessboard/Chessboard";
 import "./App.css";
 
 function App() {

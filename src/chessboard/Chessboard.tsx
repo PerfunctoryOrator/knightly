@@ -1,7 +1,7 @@
-import type { Board } from "../utils/types.ts";
-import { indexToSquare } from "../utils/types.ts";
-import PieceAreaView from "./Piece.tsx";
-import "../styles/Chessboard.css";
+import type { Board } from "./types";
+import { indexToSquare } from "./types";
+import PieceAreaView from "./Piece";
+import "./Chessboard.css";
 
 function BackgroundView() {
     return (

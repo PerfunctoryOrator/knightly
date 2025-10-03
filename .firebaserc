@@ -1,5 +1,5 @@
 {
-  "projects": {
-    "default": "knightly-app"
-  }
+    "projects": {
+        "default": "knightly-app"
+    }
 }

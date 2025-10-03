@@ -1,5 +1,5 @@
-import type { Board, Move, PieceType } from "./types.ts";
-import { Pieces } from "./types.ts";
+import type { Board, Move, PieceType } from "./types";
+import { Pieces } from "./types";
 
 class Chessboard {
     position: Board;

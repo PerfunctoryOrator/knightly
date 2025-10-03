@@ -27,22 +27,18 @@ h1 {
 
 a {
     font-weight: 500;
-    color: rgb(125, 91, 166);
+    color: rgb(var(--theme-color-r), var(--theme-color-g), var(--theme-color-b));
     text-decoration: inherit;
-    &:hover {
-        text-decoration: underline rgba(125, 91, 166, 0.3);
+    &:hover, &:focus-visible {
+        text-decoration: underline;
     }
     &:focus-visible {
         border-radius: 8px;
-        outline: 2px solid rgba(125, 91, 166, 0.3);
+        outline: 2px solid rgba(var(--theme-color-r), var(--theme-color-g), var(--theme-color-b), 0.3);
         outline-offset: 2px;
-        text-decoration: underline rgba(125, 91, 166, 0.3);
     }
     &:active {
-        color: rgb(95, 68, 130);
-    }
-    &:active:focus-visible {
-        outline-color: rgb(95, 68, 130);
+        color: var(--theme-border-color);
     }
 }
 
@@ -53,25 +49,18 @@ button {
     margin: 0.6em;
     padding: 0.6em 1.2em;
     background-color: #f9f9f9;
-    border: 1px solid transparent;
+    border: none;
     border-radius: 8px;
-    cursor: pointer;
-    transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
-    &:hover, &:focus-visible {
-        color: rgb(95, 68, 130);
-        background-color: rgba(125, 91, 166, 0.08);
-        border-color: rgb(125, 91, 166);
-    }
-    &:hover {
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    transition: color 0.25s ease, background-color 0.25s ease;
+    &:hover, &:focus-visible, &:active {
+        color: rgb(var(--theme-color-r), var(--theme-color-g), var(--theme-color-b));
+        background-color: rgba(var(--theme-color-r), var(--theme-color-g), var(--theme-color-b), 0.08);
     }
     &:focus-visible {
-        outline: 2px solid rgba(125, 91, 166, 0.3);
+        outline: 2px solid rgba(var(--theme-color-r), var(--theme-color-g), var(--theme-color-b), 0.3);
     }
     &:active {
-        background-color: rgba(125, 91, 166, 0.15);
-        outline: none;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        background-color: rgba(var(--theme-color-r), var(--theme-color-g), var(--theme-color-b), 0.15);
     }
 }
 
@@ -79,5 +68,11 @@ button {
     :root {
         color: rgba(255, 255, 255, 0.87);
         background-color: #242424;
+    }
+    button {
+        background-color: #1a1a1a;
+    }
+    a:active {
+        color: var(--theme-background-color);
     }
 }

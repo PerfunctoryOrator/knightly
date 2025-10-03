@@ -1,5 +1,5 @@
-import type { Square, Board, PieceType } from "../utils/types.ts";
-import { Pieces, indexToSquare } from "../utils/types.ts";
+import type { Square, Board, PieceType } from "./types";
+import { Pieces, indexToSquare } from "./types";
 import "../assets/staunty.css";
 
 const pieceToClass = {
@@ -12,10 +12,12 @@ const pieceToClass = {
     [Pieces.K]: "K", [Pieces.k]: "k",
 };
 
+const sqWidth = 90;
+
 function PieceView({ type, square }: { type: PieceType, square: Square }) {
     return (
         <div className={"piece " + pieceToClass[type]} style={{
-            transform: `translate(${(Math.floor(square / 10) - 1) * 80 }px, ${(8 - (square % 10)) * 80}px)`,
+            transform: `translate(${(Math.floor(square / 10) - 1) * sqWidth}px, ${(8 - (square % 10)) * sqWidth}px)`,
         }}></div>
     );
 }
